@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Devilish Chocolate</name>
+  <author>CrunchyDuck</author>
+  <targetVersion>1.0.0</targetVersion>
+  <description>Causes chocolate to be listed as a drug, in name only. This does not add any addictive properties.
+The main purpose of this mod is to add chocolate as an option in the "drugs" management tab. However, as a side effect, this means teetotalers will refuse to eat chocolate.
+  </description>
+</ModMetaData>

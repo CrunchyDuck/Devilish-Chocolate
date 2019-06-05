@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Chocolate"]/ingestible</xpath>
+	<value>
+	  <drugCategory>Social</drugCategory>
+	</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Chocolate"]/thingCategories</xpath>
+	<value>
+	  <comps>
+        <li Class="CompProperties_Drug" />
+      </comps>
+	</value>
+  </Operation>
+  <!--ModCheck patch-->
+  <Operation Class="Modcheck.Sequence">
+    <success>Always</success>
+    <patchName>Patch for Realistic Chocolate Production</patchName>
+	<operations>
+	  <li Class="Modcheck.IsModLoaded">
+	    <modName>Realistic Chocolate Production</modName>
+		<errorOnFail>false</errorOnFail>
+		<WarningFail>Slightly More Realistic Chocolate Production was not detected, ignoring it's compatibility sequence</WarningFail>
+	  </li>
+	  <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[defName="MilkChocolate"]/ingestible</xpath>
+	    <value>
+		  <drugCategory>Social</drugCategory>
+		</value>
+	  </li>
+	  <li Class="PatchOperationAdd">
+	    <xpath>Defs/ThingDef[defName="MilkChocolate"]</xpath>
+	    <value>
+	      <comps>
+            <li Class="CompProperties_Drug" />
+          </comps>
+	    </value>
+	  </li>
+	</operations>
+  </Operation>
+</Patch>
